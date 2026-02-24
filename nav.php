@@ -8,7 +8,7 @@
     <div class="nav-links">
       <a href= "index.php">Dashboard</a>
       <a href= "pages/clients_list.php">Clients</a>
-      <a href="page/services_list.php" >Services</a>
+      <a href="pages/services_list.php" >Services</a>
 
       <a href="/assessment_beginner/pages/bookings_list.php">Bookings</a>
       <a href="/assessment_beginner/pages/tools_list_assign.php">Tools</a>
