@@ -10,8 +10,9 @@ $result = mysqli_query($conn, "SELECT * FROM clients ORDER BY client_id DESC");
   <meta charset="utf-8">
   <title>Clients</title>
 <link rel="stylesheet" href="../style.css">
-</head><body>
-<?php include "../nav.php"; ?>
+</head>
+<body>
+  <?php include "../nav.php"; ?>
 
 <div class="table-container">
 
@@ -50,6 +51,7 @@ $result = mysqli_query($conn, "SELECT * FROM clients ORDER BY client_id DESC");
   </table>
 
 </div>
+
 
 </body>
 </html>

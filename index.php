@@ -20,44 +20,41 @@ $revenue = $revRow['s'];
 </head>
 
 <body>
-<?php include "nav.php"; ?>
+    <?php include "nav.php"; ?>
 
-<div class="container">
+    <div class="container">
 
-<h2>Dashboard</h2>
+        <h2>Dashboard</h2>
 
-<div class="dashboard">
+        <div class="dashboard">
 
-    <div class="card">
-        <h3>Total Clients</h3>
-        <p><?php echo $clients; ?></p>
+            <div class="card">
+                <h3>Total Clients</h3>
+                <p><?php echo $clients; ?></p>
+            </div>
+
+            <div class="card">
+                <h3>Total Services</h3>
+                <p><?php echo $services; ?></p>
+            </div>
+
+            <div class="card">
+                <h3>Total Bookings</h3>
+                <p><?php echo $bookings; ?></p>
+            </div>
+
+            <div class="card">
+                <h3>Total Revenue</h3>
+                <p>₱<?php echo number_format($revenue,2); ?></p>
+            </div>
+
+        </div>
+
+        <div class="quick-links">
+            <a href="pages/clients_add.php">Add Client</a>
+            <a href="pages/bookings_create.php">Create Booking</a>
+        </div>
+
     </div>
-
-    <div class="card">
-        <h3>Total Services</h3>
-        <p><?php echo $services; ?></p>
-    </div>
-
-    <div class="card">
-        <h3>Total Bookings</h3>
-        <p><?php echo $bookings; ?></p>
-    </div>
-
-    <div class="card">
-        <h3>Total Revenue</h3>
-        <p>₱<?php echo number_format($revenue,2); ?></p>
-    </div>
-
-</div>
-
-<div class="quick-links">
-    <a href="pages/clients_add.php">Add Client</a>
-    <a href="pages/bookings_create.php">Create Booking</a>
-</div>
-
-</div>
-
 </body>
-
-
 </html>

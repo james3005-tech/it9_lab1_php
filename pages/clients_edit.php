@@ -36,47 +36,46 @@ if (isset($_POST['update'])) {
 </head>
 
 <body>
-<?php include "../nav.php"; ?>
 
-<div class="form-container">
-  <h2>Edit Client</h2>
+  <?php include "../nav.php"; ?>
 
-  <?php if ($message != ""): ?>
-    <div class="error-message"><?php echo $message; ?></div>
-  <?php endif; ?>
+  <div class="form-container">
+    <h2>Edit Client</h2>
 
-  <form method="post" class="client-form">
+    <?php if ($message != ""): ?>
+      <div class="error-message"><?php echo $message; ?></div>
+    <?php endif; ?>
 
-    <div class="form-group">
-      <label>Full Name*</label>
-      <input type="text" name="full_name"
+    <form method="post" class="client-form">
+
+      <div class="form-group">
+        <label>Full Name*</label>
+        <input type="text" name="full_name"
              value="<?php echo $client['full_name']; ?>">
-    </div>
+      </div>
 
-    <div class="form-group">
-      <label>Email*</label>
-      <input type="text" name="email"
+      <div class="form-group">
+        <label>Email*</label>
+        <input type="text" name="email"
              value="<?php echo $client['email']; ?>">
-    </div>
+      </div>
 
-    <div class="form-group">
-      <label>Phone</label>
-      <input type="text" name="phone"
+      <div class="form-group">
+        <label>Phone</label>
+        <input type="text" name="phone"
              value="<?php echo $client['phone']; ?>">
-    </div>
+      </div>
 
-    <div class="form-group">
-      <label>Address</label>
-      <input type="text" name="address"
+      <div class="form-group">
+        <label>Address</label>
+        <input type="text" name="address"
              value="<?php echo $client['address']; ?>">
-    </div>
+      </div>
 
-    <button type="submit" name="update" class="btn-save">
-      Update Client
-    </button>
+      <button type="submit" name="update" class="btn-save">Update Client</button>
 
-  </form>
-</div>
+    </form>
+  </div>
 
 </body>
 </html>

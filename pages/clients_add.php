@@ -30,41 +30,42 @@ if (isset($_POST['save'])) {
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-<?php include "../nav.php"; ?>
+  
+  <?php include "../nav.php"; ?>
 
-<div class="form-container">
-  <h2>Add Client</h2>
+  <div class="form-container">
+    <h2>Add Client</h2>
 
-  <?php if ($message != ""): ?>
-    <div class="error-message"><?php echo $message; ?></div>
-  <?php endif; ?>
+    <?php if ($message != ""): ?>
+      <div class="error-message"><?php echo $message; ?></div>
+    <?php endif; ?>
 
-  <form method="post" class="client-form">
+    <form method="post" class="client-form">
 
-    <div class="form-group">
-      <label>Full Name*</label>
-      <input type="text" name="full_name">
-    </div>
+      <div class="form-group">
+        <label>Full Name*</label>
+        <input type="text" name="full_name">
+      </div>
 
-    <div class="form-group">
-      <label>Email*</label>
-      <input type="text" name="email">
-    </div>
+      <div class="form-group">
+        <label>Email*</label>
+        <input type="text" name="email">
+      </div>
 
-    <div class="form-group">
-      <label>Phone</label>
-      <input type="text" name="phone">
-    </div>
+      <div class="form-group">
+        <label>Phone</label>
+        <input type="text" name="phone">
+      </div>
 
-    <div class="form-group">
-      <label>Address</label>
-      <input type="text" name="address">
-    </div>
+      <div class="form-group">
+        <label>Address</label>
+        <input type="text" name="address">
+      </div>
 
-    <button type="submit" name="save" class="btn-save">Save Client</button>
+      <button type="submit" name="save" class="btn-save">Save Client</button>
 
-  </form>
-</div>
+    </form>
+  </div>
 
 </body>
 </html>

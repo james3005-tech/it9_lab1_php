@@ -25,42 +25,42 @@ $result = mysqli_query($conn, $sql);
 <div class="table-container">
 
   <div class="table-header">
-  <h2>Bookings</h2>
-  <p><a href="bookings_create.php" class="btn-add">+ Create Booking</a></p>
+    <h2>Bookings</h2>
+    <p><a href="bookings_create.php" class="btn-add">+ Create Booking</a></p>
   </div>
  
- <table class="styled-table">
-  <thead>
-  <tr>
-    <th>ID</th>
-    <th>Client</th>
-    <th>Service</th>
-    <th>Date</th>
-    <th>Hours</th>
-    <th>Total</th>
-    <th>Status</th>
-    <th>Action</th>
-  </tr>
-  </thead>
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Client</th>
+        <th>Service</th>
+        <th>Date</th>
+        <th>Hours</th>
+        <th>Total</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
 
-  <tbody>
-  <?php while($b = mysqli_fetch_assoc($result)) { ?>
-    <tr>
-      <td><?php echo $b['booking_id']; ?></td>
-      <td><?php echo $b['client_name']; ?></td>
-      <td><?php echo $b['service_name']; ?></td>
-      <td><?php echo $b['booking_date']; ?></td>
-      <td><?php echo $b['hours']; ?></td>
-      <td>₱<?php echo number_format($b['total_cost'],2); ?></td>
-      <td><?php echo $b['status']; ?></td>
-      <td>
-        <a href="payment_process.php?booking_id=<?php echo $b['booking_id']; ?>" class="btn-edit">Process Payment</a>
-      </td>
-    </tr>
-  <?php } ?>
-  </tbody>
+    <tbody>
+      <?php while($b = mysqli_fetch_assoc($result)) { ?>
+        <tr>
+          <td><?php echo $b['booking_id']; ?></td>
+          <td><?php echo $b['client_name']; ?></td>
+          <td><?php echo $b['service_name']; ?></td>
+          <td><?php echo $b['booking_date']; ?></td>
+          <td><?php echo $b['hours']; ?></td>
+          <td>₱<?php echo number_format($b['total_cost'],2); ?></td>
+          <td><?php echo $b['status']; ?></td>
+          <td>
+            <a href="payment_process.php?booking_id=<?php echo $b['booking_id']; ?>" class="btn-edit">Process Payment</a>
+          </td>
+        </tr>
+      <?php } ?>
+    </tbody>
 
- </table>
- </div>
+  </table>
+</div>
 </body>
 </html>

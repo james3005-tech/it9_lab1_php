@@ -24,45 +24,53 @@ if (isset($_POST['create'])) {
   exit;
 }
 ?>
+
+
 <!doctype html>
 <html>
-<head><meta charset="utf-8"><title>Create Booking</title><link rel="stylesheet" href="../style.css"></head>
+<head><meta charset="utf-8">
+<title>Create Booking</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+
 <body>
 <?php include "../nav.php"; ?>
  
 <div class="form-container">
-<h2>Create Booking</h2>
+  <h2>Create Booking</h2>
  
-<form method="post" class="client-form">
+  <form method="post" class="client-form">
 
-  <div class="form-group">
+    <div class="form-group">
 
-  <label>Client</label><br>
-  <select name="client_id">
-    <?php while($c = mysqli_fetch_assoc($clients)) { ?>
-      <option value="<?php echo $c['client_id']; ?>"><?php echo $c['full_name']; ?></option>
-    <?php } ?>
-  </select><br><br>
+      <label>Client</label><br>
+        <select name="client_id">
+          <?php while($c = mysqli_fetch_assoc($clients)) { ?>
+            <option value="<?php echo $c['client_id']; ?>"><?php echo $c['full_name']; ?></option>
+          <?php } ?>
+        </select><br><br>
  
 
-  <label>Service</label><br>
-  <select name="service_id">
-    <?php while($s = mysqli_fetch_assoc($services)) { ?>
-      <option value="<?php echo $s['service_id']; ?>">
-        <?php echo $s['service_name']; ?> (₱<?php echo number_format($s['hourly_rate'],2); ?>/hr)
-      </option>
-    <?php } ?>
-  </select><br><br>
+      <label>Service</label><br>
+        <select name="service_id">
+          <?php while($s = mysqli_fetch_assoc($services)) { ?>
+            <option value="<?php echo $s['service_id']; ?>">
+              <?php echo $s['service_name']; ?> (₱<?php echo number_format($s['hourly_rate'],2); ?>/hr)
+            </option>
+          <?php } ?>
+        </select><br><br>
  
   
-  <label>Date</label><br>
-  <input type="date" name="booking_date"><br><br>
+      <label>Date</label><br>
+      <input type="date" name="booking_date"><br><br>
  
-  <label>Hours</label><br>
-  <input type="number" name="hours" min="1" value="1"><br><br></div>
+      <label>Hours</label><br>
+      <input type="number" name="hours" min="1" value="1"><br><br></div>
  
-  <button type="submit" name="create" class="btn-save">Create Booking</button>
-</form>
+      <button type="submit" name="create" class="btn-save">Create Booking</button>
+  
+ </form>
+</div>
 </body>
 </html>
  
