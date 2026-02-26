@@ -52,7 +52,7 @@ $revenue = $revRow['s'];
 
 <div class="quick-links">
     <a href="pages/clients_add.php">Add Client</a>
-    <a href="index.php">Create Booking</a>
+    <a href="pages/bookings_create.php">Create Booking</a>
 </div>
 
 </div>

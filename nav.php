@@ -10,9 +10,9 @@
       <a href= "pages/clients_list.php">Clients</a>
       <a href="pages/services_list.php" >Services</a>
 
-      <a href="/assessment_beginner/pages/bookings_list.php">Bookings</a>
-      <a href="/assessment_beginner/pages/tools_list_assign.php">Tools</a>
-      <a href="/assessment_beginner/pages/payments_list.php">Payments</a>
+      <a href="pages/bookings_list.php">Bookings</a>
+      <a href="pages/tools_list_assign.php">Tools</a>
+      <a href="pages/payments_list.php">Payments</a>
     </div>
   </div>
 </nav>
