@@ -1,7 +1,28 @@
 <?php
 include "../db.php";
+
+/* ============================
+   SOFT DELETE (Deactivate)
+   ============================ */
+if (isset($_GET['delete_id'])) {
+  $delete_id = $_GET['delete_id'];
+ 
+ 
+  // Soft delete (set is_active to 0)
+  mysqli_query($conn, "UPDATE services SET is_active=0 WHERE service_id=$delete_id");
+ 
+ 
+  header("Location: services_list.php");
+  exit;
+}
+ 
+ 
+/* ============================
+   FETCH ALL SERVICES
+   ============================ */
 $result = mysqli_query($conn, "SELECT * FROM services ORDER BY service_id DESC");
 ?>
+
 
 <!doctype html>
 <html>
@@ -17,7 +38,9 @@ $result = mysqli_query($conn, "SELECT * FROM services ORDER BY service_id DESC")
 
     <div class="table-header">
       <h2>Services</h2>
+      <p><a href="services_add.php" class="btn-add">+ Add Service</a></p>
     </div>
+
 
     <table class="styled-table">
       <thead>
@@ -43,9 +66,17 @@ $result = mysqli_query($conn, "SELECT * FROM services ORDER BY service_id DESC")
                 <span class="badge-inactive">Inactive</span>
               <?php } ?>
             </td>
+
             <td>
               <a href="services_edit.php?id=<?php echo $row['service_id']; ?>" class="btn-edit">Edit</a>
+            
+              <a href="services_list.php?delete_id=<?php echo $row['service_id']; ?>"
+              onclick="return confirm('Deactivate this service?')"
+              class="btn-deactivate">
+              Deactivate</a>
+
             </td>
+
           </tr>
         <?php } ?>
       </tbody>
