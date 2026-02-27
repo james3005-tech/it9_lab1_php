@@ -102,6 +102,7 @@ $bookings = mysqli_query($conn, "SELECT booking_id FROM bookings ORDER BY bookin
       </div>
     </form>
  
+    
   </div>
 </body>
 </html>

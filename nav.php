@@ -12,6 +12,7 @@
         <a href="/assess/pages/bookings_list.php">Bookings</a>
         <a href="/assess/pages/tools_list_assign.php">Tools</a>
         <a href="/assess/pages/payments_list.php">Payments</a>
+        <a href="/assess/logout.php">Logout</a>
       </div>
   </div>
 </nav>

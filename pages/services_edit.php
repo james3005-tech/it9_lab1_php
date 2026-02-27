@@ -63,6 +63,5 @@ if (isset($_POST['update'])) {
       <button type="submit" name="update" class="btn-save">Update</button>
     </form>
   </div>
-
 </body>
 </html>

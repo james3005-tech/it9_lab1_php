@@ -72,8 +72,8 @@ $result = mysqli_query($conn, "SELECT * FROM services ORDER BY service_id DESC")
             
               <a href="services_list.php?delete_id=<?php echo $row['service_id']; ?>"
               onclick="return confirm('Deactivate this service?')"
-              class="btn-deactivate">
-              Deactivate</a>
+              class="btn-deact"
+              >Deactivate</a>
 
             </td>
 
